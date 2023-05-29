@@ -1,0 +1,226 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.my-project {
+    width: 680px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: " mehdi mehdi"
+        "asma1 asma2";
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.my-project .mehdi {
+    padding: 45px;
+    grid-area: mehdi;
+    height: 230px;
+}
+
+.my-project .mehdi h2 {
+    color: hsl(179, 62%, 43%);
+    margin-top: 0;
+}
+
+.my-project .mehdi h3 {
+    color: hsl(71, 73%, 54%);
+}
+
+.my-project .mehdi p {
+    color: hsl(218, 22%, 67%);
+    width: 98%;
+    line-height: 1.7;
+}
+
+.my-project .asma1 {
+    grid-area: asma1;
+    background-color: hsl(179, 62%, 43%);
+    padding: 45px;
+    height: 268px;
+    border-bottom-left-radius: 10px;
+}
+
+.my-project .asma1 h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.my-project .asma1 .price {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+
+}
+
+.my-project .asma1 .price span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.my-project .asma1 .price p {
+    color: hsl(204deg 43% 93% / 70%);
+    margin-bottom: 0;
+}
+
+.my-project .asma1 p {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.my-project .asma1 button {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.my-project .asma2 {
+    grid-area: asma2;
+    padding: 45px;
+    background-color: hsl(179deg 61.17% 39.72% / 74%);
+    height: 268px;
+    border-bottom-right-radius: 10px;
+}
+
+.my-project .asma2 h3 {
+    margin-top: 0;
+    color: white;
+}
+
+.my-project .asma2 p {
+    color: hsl(204deg 43% 93% / 70%);
+    width: 83.5%;
+}
+
+
+.my-project .asma2 p:nth-child(2) {
+    margin-bottom: 0;
+}
+
+.my-project .asma2 p:nth-child(3) {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.my-project .asma2 p:nth-child(4) {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (max-width:750px) {
+    .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: hsl(204, 43%, 93%);
+    }
+
+    .my-project {
+        width: 300px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: " mehdi " "asma1" "asma2";
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        gap: 0px;
+    }
+
+    .my-project .mehdi {
+        padding: 25px;
+        grid-area: mehdi;
+        height: 100%;
+    }
+
+    .my-project .mehdi h2 {
+        color: hsl(179, 62%, 43%);
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .my-project .mehdi h3 {
+        color: hsl(71, 73%, 54%);
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .my-project .mehdi p {
+        color: hsl(218, 22%, 67%);
+        width: 100%;
+        line-height: 1.7;
+        font-size: 13px;
+    }
+
+    .my-project .asma1 {
+        grid-area: asma1;
+        background-color: hsl(179, 62%, 43%);
+        padding: 25px;
+        height: 234px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .my-project .asma1 h3 {
+        margin-top: 0;
+        color: white;
+        font-size: 18px;
+    }
+
+    .my-project .asma1 .price {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .my-project .asma1 p {
+        color: white;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .my-project .asma2 {
+        grid-area: asma2;
+        padding: 25px;
+        background-color: hsl(179deg 61.17% 39.72% / 74%);
+        height: 234px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .my-project .asma2 h3 {
+        margin-top: 0;
+        color: white;
+        font-size: 18px;
+    }
+}
